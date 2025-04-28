@@ -9,14 +9,11 @@
       "dest": "/api/$1"
     },
     {
-      "src": "/(.*\\.(js|mjs))",
-      "headers": { "content-type": "application/javascript" },
-      "continue": true
+      "src": "/(assets/.+)",
+      "dest": "/$1"
     },
     {
-      "src": "/(.*\\.css)",
-      "headers": { "content-type": "text/css" },
-      "continue": true
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
